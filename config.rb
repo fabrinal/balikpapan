@@ -97,6 +97,10 @@ helpers do
     end
     tags
   end
+
+  def get_topic(tag)
+    data.topics.topics[tag.to_s].to_s
+  end
 end
 
 # activate :sprockets
