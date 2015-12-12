@@ -1,3 +1,8 @@
 topics:
   ktp: "Kartu Tanda Penduduk"
   imb: "Ijin Mendirikan Bangunan"
+  domisili: "Surat Domisili"
+  perpindahan: "Perpindahan Penduduk"
+  mortalitas: "Akta Kelahiran/Kematian"
+  anak: "Pengakuan/Pengesahan Anak"
+  plainnya: "Kependudukan Lainnya"
