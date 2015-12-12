@@ -36,7 +36,7 @@
                      <% @topics = data.topics.topics %>
                      <% get_tags(category).each do |tag| %>
                       <li>
-                          <%= link_to "#{get_topic(tag)}", "#{tag}.html" %>
+                          <%= link_to "#{get_topic(tag)}", tag_path(tag) %>
                       </li>
                      <% end %>
                    </ul>
