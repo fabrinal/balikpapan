@@ -7,10 +7,16 @@
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
-
-  # blog.permalink = "{year}/{month}/{day}/{title}.html"
+  blog.sources = "{category}/{title}.html"
+  blog.permalink = "{category}/{title}.html"
+  blog.custom_collections = {
+    category: {
+      link: '/{category}.html',
+      template: '/category.html'
+    }
+  }
   # Matcher for blog source files
-  # blog.sources = "{year}-{month}-{day}-{title}.html"
+
   # blog.taglink = "tags/{tag}.html"
   # blog.layout = "layout"
   # blog.summary_separator = /(READMORE)/
@@ -72,11 +78,26 @@ page "/feed.xml", layout: false
 # activate :livereload
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def all_categories
+    categories = []
+    blog.articles.each do |article|
+      category = article.data[:category]
+      categories.push(category) unless categories.include? category
+    end
+    categories
+  end
+  def get_tags(category)
+    tags = []
+    blog.articles.each do |article|
+      if article.data[:category] == category
+        tag = article.data[:tags]
+        tags.push(tag) unless tags.include? tag
+      end
+    end
+    tags
+  end
+end
 
 # activate :sprockets
 
