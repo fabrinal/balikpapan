@@ -23,7 +23,6 @@
    </div>
 
      <div id="wrapper">
-         <!-- Sidebar -->
          <div id="sidebar-wrapper">
              <ul class="sidebar-nav">
                 <% all_categories.each do |category| %>
@@ -45,9 +44,7 @@
                <% end %>
              </ul>
          </div>
-         <!-- /#sidebar-wrapper -->
 
-         <!-- Page Content -->
          <div id="page-content-wrapper">
              <div class="container-fluid">
                  <div class="row">
@@ -55,21 +52,8 @@
                  </div>
              </div>
          </div>
-         <!-- /#page-content-wrapper -->
 
      </div>
-     <!-- /#wrapper -->
-
-     <script>
-     $(".navbar-brand").click(function(e) {
-         e.preventDefault();
-         $("#wrapper").toggleClass("toggled");
-     });
-     $(".nav-button").click(function(e) {
-         e.preventDefault();
-         $("#wrapper").toggleClass("toggled");
-     });
-     </script>
-
+     <%= javascript_include_tag  "main" %>
   </body>
 </html>
