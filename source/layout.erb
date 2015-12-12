@@ -28,7 +28,7 @@
                 <% all_categories.each do |category| %>
                <li>
                  <a role="button" data-toggle="collapse" href= <%= "#" + "#{category}"%> aria-expanded= "false" aria-controls= <%= category %> >
-                   <%= category.capitalize %>
+                   <%= category.to_s.capitalize %>
                  </a>
                  <div id= <%= category %> class="collapse">
                    <ul>

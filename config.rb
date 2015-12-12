@@ -82,7 +82,7 @@ helpers do
   def all_categories
     categories = []
     blog.articles.each do |article|
-      category = article.data[:category]
+      category = article.data[:category] != nil ? article.data[:category] : "Lainnya"
       categories.push(category) unless categories.include? category
     end
     categories
