@@ -35,7 +35,7 @@
                    <ul>
                      <% get_tags(category).each do |tag| %>
                       <li>
-                          <%= tag %>
+                          <%= link_to "#{tag}", "#{tag}.html" %>
                       </li>
                      <% end %>
                    </ul>

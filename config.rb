@@ -17,7 +17,7 @@ activate :blog do |blog|
   }
   # Matcher for blog source files
 
-  # blog.taglink = "tags/{tag}.html"
+  blog.taglink = "{tag}.html"
   # blog.layout = "layout"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
