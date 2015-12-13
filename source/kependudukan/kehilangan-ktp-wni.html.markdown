@@ -1,5 +1,5 @@
 ---
-title: Kehilangan KTP WNI
+title: Kehilangan KTP Warga Negara Indonesia
 date: 2015-12-12 19:35 HKT
 tags: ktp
 category: kependudukan
