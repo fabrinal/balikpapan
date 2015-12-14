@@ -6,15 +6,15 @@ Time.zone = "Hongkong"
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
-  # blog.prefix = "blog"
-  blog.sources = "{category}/{title}.html"
+  blog.prefix = "info"
+  blog.sources = "{title}.html"
   blog.permalink = "{category}/{title}.html"
-  blog.custom_collections = {
-    category: {
-      link: '/{category}.html',
-      template: '/category.html'
-    }
-  }
+  # blog.custom_collections = {
+  #   category: {
+  #     link: '/{category}.html',
+  #     template: '/category.html'
+  #   }
+  # }
   # Matcher for blog source files
 
   blog.taglink = "{tag}.html"
@@ -27,12 +27,12 @@ activate :blog do |blog|
   # blog.default_extension = ".markdown"
 
   blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
+  # blog.calendar_template = "calendar.html"
 
   # Enable pagination
-  blog.paginate = true
-  blog.per_page = 10
-  blog.page_link = "page/{num}"
+  # blog.paginate = true
+  # blog.per_page = 10
+  # blog.page_link = "page/{num}"
 end
 
 page "/feed.xml", layout: false
